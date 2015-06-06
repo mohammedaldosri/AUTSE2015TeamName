@@ -154,7 +154,7 @@
                     outline-offset: 0; // WebKit sets this to -1 by default
                 }
             }
-          
+
 
             input[type=submit] {
                 padding: 0 18px;
@@ -201,103 +201,86 @@
                     outline-color: #dceefc;
                     outline-offset: 0;
                 }
-            
 
 
-                </style>
-            </head>
 
-            <body>
-                <div id="wrap">
+            </style>
+        </head>
 
-
-                    <!-- Here's all it takes to make this navigation bar. -->
-                    <ul id="nav">
-                        <li><a href="display_welcome.html" target="right">Home</a></li>
-                        <li><a href="favArticle.html" target="right">Favorite article</a></li>
-                        <li><a href="login.html" target="right">Login</a></li>
-                    </ul>
-                    <!-- That's it! -->
-
-                    <div id="content" >
-                        <p> Welcome to add article page</p>
+        <body>
+            <div id="wrap">
 
 
-                    </div>
+                <!-- Here's all it takes to make this navigation bar. -->
+                <ul id="nav">
+                    <li><a href="display_welcome.html" target="right">Home</a></li>
+                    <li><a href="favArticle.html" target="right">Favorite article</a></li>
+                    <li><a href="login.html" target="right">Login</a></li>
+                </ul>
+                <!-- That's it! -->
+
+                <div id="content" >
+                    <p> Welcome to add article page</p>
+
+
                 </div>
+            </div>
 
-            </body>
+        </body>
 
-            <section class="container">
-                <div class="login">
-                    <h1>Upload your paper</h1>
-                    <form action="addArticle" method="POST">     
-                        <div style="color:black">
-                            
-                                <div class="styled-select">
-                                    <select name="typeArticle" id="typeArticle">
-                                        <option value="ATDD">ATDD</option>
-                                        <option value="PSP">PSP</option>
-                                        <option value="DSM">DSM</option>
-                                        <option value="Inspections">Inspections</option>
-                                        <option value="MDA">MDA</option>
-                                    </select>
-                                </div>
-
-                                <p><input type="text" name="paperTitle" value="" placeholder="Enter the paper title">*</p>
-                               
-                                <p><input type="text" name="contents" value="" placeholder="Enter the article here">*</p>
-                                  
-                                <p><input type="text" name="author" value="" placeholder="author name">*</p>
-                                <p><input type="date" name="date" value="" placeholder="author name">*</p>
-                                <div class="styled-select">
-                                    <select name="typeArticle" id="typeArticle">
-                                        <option value="ATDD">what should i put here</option>
-                                        <option value="PSP"></option>
-                                        <option value="DSM"></option>
-                                        <option value="Inspections"></option>
-                                        <option value="MDA"></option>
-                                    </select>
-                                </div>
-                                <p><input type="text" name="author" value="" placeholder="">*</p>
-                                <div class="styled-select">
-                                    <select name="typeArticle" id="typeArticle">
-                                        <option value="ATDD">what should i put here</option>
-                                        <option value="PSP"></option>
-                                        <option value="DSM"></option>
-                                        <option value="Inspections"></option>
-                                        <option value="MDA"></option>
-                                    </select>
-                                </div>
-                                <p><input type="text" name="author" value="" placeholder="">*</p>
-                                <p><input type="text" name="author" value="" placeholder="">*</p>
-                                <p><input type="text" name="author" value="" placeholder="">*</p>
-                             
+        <section class="container">
+            <div class="login">
+                <h1>Upload your paper</h1>
+                <form action="addArticle" method="POST">     
+                    <div style="color:black">
+                            <div class="styled-select">
+                                <select name="typeArticle" id="typeArticle">
+                                    <option value="Methodology">Methodology</option>
+                                    <option value="ATDD">ATDD</option>
+                                    <option value="PSP">PSP</option>
+                                    <option value="DSM">DSM</option>
+                                    <option value="Inspections">Inspections</option>
+                                    <option value="MDA">MDA</option>
+                                </select>
                             </div>
-                            <!-- <p class="remember_me">
-                             <label>
-                                <input type="checkbox" name="remember_me" id="remember_me">
-                                Remember me on this computer
-                              </label>
-                            </p> -->
-                            <p class="submit">
-                                <input type="submit" name="" value="Add">
-                                    <!-- <input  type="submit" name="ForgotPassword" value="Forgot password"></p>-->
-                                    </form>
-                                    </div>
+                            <p><input type="text" name="practices" value="" placeholder="Practices">*</p>
+                            <p><input type="text" name="paperTitle" value="" placeholder="Enter the paper title">*</p>
+                            <p><input type="text" name="contents" value="" placeholder="Enter the article here">*</p>
+                            <p><input type="text" name="author" value="" placeholder="author name">*</p>
+                            <p><input type="date" name="date" value="" placeholder="author name">*</p>
+                            <p><input type="text" name="participient" value="" placeholder="Participient">*</p>
+                            <p><input type="text" name="who" value="" placeholder="WHO - WHAT - WHERE - WHY">*</p>
+                            <p><input type="text" name="results" value="" placeholder="Results of studies">*</p>
+                            <p><input type="text" name="integrity" value="" placeholder="Integrity of study">*</p>
+                            <p><input type="text" name="benefits" value="" placeholder="who does this paper benefit">*</p>
+                            <p><input type="text" name="credibility" value="" placeholder="credibility of study">*</p>
+                            <p><input type="text" name="whoAndWhy" value="" placeholder="who rated it, and why">*</p>
+                            <p><input type="text" name="metrics" value="" placeholder="Metrics">*</p>
+                        </div>
+                        <!-- <p class="remember_me">
+                         <label>
+                            <input type="checkbox" name="remember_me" id="remember_me">
+                            Remember me on this computer
+                          </label>
+                        </p> -->
+                        <p class="submit">
+                            <input type="submit" name="" value="Add">
+                                <!-- <input  type="submit" name="ForgotPassword" value="Forgot password"></p>-->
+                                </form>
+                                </div>
 
-                                    <!-- <div class="login-help">
-                                        <p>Don't you have an account? <a href="index.html">Click here to sign up</a>.</p>
-                                      </div> -->
+                                <!-- <div class="login-help">
+                                    <p>Don't you have an account? <a href="index.html">Click here to sign up</a>.</p>
+                                  </div> -->
 
-                                    <!-- <section class="about">
-                                       <p class="about-links">
-                                         <a href="http://www.cssflow.com/snippets/login-form" target="_parent">View Article</a>
-                                         <a href="http://www.cssflow.com/snippets/login-form.zip" target="_parent">Download</a>
-                                       </p>
-                                       <p class="about-author">
-                                         &copy; 2012&ndash;2013 <a href="http://thibaut.me" target="_blank">Thibaut Courouble</a> -
-                                         <a href="http://www.cssflow.com/mit-license" target="_blank">MIT License</a><br>
-                                         Original PSD by <a href="http://www.premiumpixels.com/freebies/clean-simple-login-form-psd/" target="_blank">Orman Clark</a>
-                                     </section> -->
-                                    </html>
+                                <!-- <section class="about">
+                                   <p class="about-links">
+                                     <a href="http://www.cssflow.com/snippets/login-form" target="_parent">View Article</a>
+                                     <a href="http://www.cssflow.com/snippets/login-form.zip" target="_parent">Download</a>
+                                   </p>
+                                   <p class="about-author">
+                                     &copy; 2012&ndash;2013 <a href="http://thibaut.me" target="_blank">Thibaut Courouble</a> -
+                                     <a href="http://www.cssflow.com/mit-license" target="_blank">MIT License</a><br>
+                                     Original PSD by <a href="http://www.premiumpixels.com/freebies/clean-simple-login-form-psd/" target="_blank">Orman Clark</a>
+                                 </section> -->
+                                </html>

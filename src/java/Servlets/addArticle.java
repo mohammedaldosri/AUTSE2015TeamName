@@ -1,4 +1,4 @@
-package Servlets; 
+package Servlets;
 
 
 /*
@@ -6,7 +6,6 @@ package Servlets;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import static com.sun.xml.bind.util.CalendarConv.formatter;
 import java.io.IOException;
 import java.sql.Connection;
@@ -29,7 +28,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class addArticle extends HttpServlet {
 
-   
     private final PreparedStatement statement1;
 
     public addArticle() throws IOException, ClassNotFoundException, SQLException {
@@ -42,8 +40,8 @@ public class addArticle extends HttpServlet {
         // connect to the database and create a prepared statement
         Class.forName(dbDriver);
         Connection connection = DriverManager.getConnection(dbUrl, userName, password);
-       statement1 = connection.prepareStatement("insert into datainfo(type, paperTitle, contents, author, date)"
-              + " values (?,?,?,?,?)");
+        statement1 = connection.prepareStatement("insert into datainfo(type, paperTitle, contents, author, date, practices, participient, who, results, integrity, benefits, credibility, whoAndWhy, metrics )"
+                + " values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
         System.out.println("Opened database successfully");
 
         /*   preparedStatement = connection.prepareStatement(statement1);
@@ -64,6 +62,15 @@ public class addArticle extends HttpServlet {
         String contents = request.getParameter("contents");
         String author = request.getParameter("author");
         String date = request.getParameter("date");
+        String practices = request.getParameter("practices");
+        String participient = request.getParameter("participient");
+        String who = request.getParameter("who");
+        String results = request.getParameter("results");
+        String integrity = request.getParameter("integrity");
+        String benefits = request.getParameter("benefits");
+        String credibility = request.getParameter("credibility");
+        String whoAndWhy = request.getParameter("whoAndWhy");
+        String metrics = request.getParameter("metrics");
 
         boolean isAdded = true;
         try {
@@ -72,6 +79,15 @@ public class addArticle extends HttpServlet {
             statement1.setString(3, contents);
             statement1.setString(4, author);
             statement1.setString(5, date);
+            statement1.setString(6, practices);
+            statement1.setString(7, participient);
+            statement1.setString(8, who);
+            statement1.setString(9, results);
+            statement1.setString(10, integrity);
+            statement1.setString(11, benefits);
+            statement1.setString(12, credibility);
+            statement1.setString(13, whoAndWhy);
+            statement1.setString(14, metrics);
             statement1.executeUpdate();
         } catch (SQLException ex) {
             isAdded = false;
