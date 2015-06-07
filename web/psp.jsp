@@ -250,7 +250,7 @@ td.text-right {
                                 + "<td>" + "<a href='getArticle?paperTitle=" + article.getPaperTile() + "' target='right'>" + article.getPaperTile() + "</a>" + "</td>"
                                 + "<td>" + article.getAuthor() + "</td>"
                                  + "<td>" + calendar.get(Calendar.YEAR) + "</td>"
-                                + "<td>" + "null" + "</td>"
+                                + "<td>" + article.getResults() + "</td>"
                                 + "<td>" + "<select> <option> 1 </option>"
                                 + "<option>2</option>" 
                                  + "<option>3</option>" 

@@ -46,7 +46,7 @@ public class search extends HttpServlet {
             String search = request.getParameter("searchInput");
             String typeArticle = request.getParameter("typeArticle");
             
-            statement1 = connection.prepareStatement("SELECT type,paperTitle,author,date FROM datainfo WHERE paperTitle='" + search + "'");
+            statement1 = connection.prepareStatement("SELECT type,paperTitle,author,date,results FROM datainfo WHERE paperTitle ='" + search + "' AND type='"+ typeArticle+"'");
             //statement1 = connection.prepareStatement("SELECT type,paperTitle,author,date FROM datainfo WHERE type='" + typeArticle + "'");
        
             System.out.println("Opened database successfully");
@@ -64,6 +64,7 @@ public class search extends HttpServlet {
                 article.setPaperTile(resultSet.getString("paperTitle"));
                 article.setAuthor(resultSet.getString("author"));
                 article.setDate(resultSet.getDate("date"));
+                article.setResults(resultSet.getString("results"));
                 articles.add(article);
             }
 

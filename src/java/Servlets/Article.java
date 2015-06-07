@@ -18,6 +18,7 @@ public class Article implements Serializable {
     private String paperTile;
     private String author;
     private Date date;
+    private String results;
 
     /**
      * @return the type
@@ -73,6 +74,20 @@ public class Article implements Serializable {
      */
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    /**
+     * @return the results
+     */
+    public String getResults() {
+        return results;
+    }
+
+    /**
+     * @param results the results to set
+     */
+    public void setResults(String results) {
+        this.results = results;
     }
     
 }

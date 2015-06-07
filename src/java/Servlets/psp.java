@@ -39,7 +39,7 @@ public class psp extends HttpServlet {
         // connect to the database and create a prepared statement
         Class.forName(dbDriver);
         Connection connection = DriverManager.getConnection(dbUrl, userName, password);
-        statement1 = connection.prepareStatement("SELECT type,paperTitle,author,date FROM datainfo WHERE type='PSP'");
+        statement1 = connection.prepareStatement("SELECT type,paperTitle,author,date,results FROM datainfo WHERE type='PSP'");
         System.out.println("Opened database successfully");
 
         /*   preparedStatement = connection.prepareStatement(statement1);
@@ -78,6 +78,7 @@ public class psp extends HttpServlet {
                 article.setPaperTile(resultSet.getString("paperTitle"));
                 article.setAuthor(resultSet.getString("author"));
                 article.setDate(resultSet.getDate("date"));
+                article.setResults(resultSet.getString("results"));
                 articles.add(article);
             }
 
