@@ -212,13 +212,14 @@
     </body>
 
     <section class="container">
-        <div class="login">
+        <div   class="login">
             <h1>Search</h1>
-            <form action="Search" method="POST">
-                <p><input type="text" name="search" value="" placeholder="Search value"></p>
+            <form action="search" method="POST" target="right">
+                <p><input type="text" name="searchInput" id="searchInput"  placeholder="Search value" ></p>
                 Search field
                  <div class="styled-select">
                                     <select name="typeArticle" id="typeArticle">
+                                         <option value="ATDD">Everything</option>
                                         <option value="ATDD">ATDD</option>
                                         <option value="PSP">PSP</option>
                                         <option value="DSM">DSM</option>
@@ -240,7 +241,7 @@
                 
                 
                 <p class="submit">
-                    <p><input type="submit" name="" value="Search"></p>
+                    <p><input type="submit" name="search" value="Search"></p>
                     <p><input type="submit" name="" value="Run"></p>
                     <p><input type="submit" name="" value="Save"></p>
                      

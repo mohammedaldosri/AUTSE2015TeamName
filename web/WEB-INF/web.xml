@@ -24,6 +24,10 @@
         <servlet-name>psp</servlet-name>
         <servlet-class>Servlets.psp</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>search</servlet-name>
+        <servlet-class>Servlets.search</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Signup</servlet-name>
         <url-pattern>/Signup</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>psp</servlet-name>
         <url-pattern>/psp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>search</servlet-name>
+        <url-pattern>/search</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
